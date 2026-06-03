@@ -87,7 +87,7 @@ test('puede marcar una tarea como completada', function () {
     $task = Task::factory()->create(['completed' => false]);
 
     $response = $this->patchJson('/api/tasks/' . $task->id . '/complete');
-
+                                                                                                                                                                        
     $response->assertStatus(200)
         ->assertJsonFragment(['completed' => true]);
 
